@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "644150949403",
+    "project_id": "whatnownewsapp",
+    "storage_bucket": "whatnownewsapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644150949403:android:9bdf269ceddaeef8e06abe",
+        "android_client_info": {
+          "package_name": "com.example.whatnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4L_5lHizlXA0Jx3S5-fbDs5u0EiFZaz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
