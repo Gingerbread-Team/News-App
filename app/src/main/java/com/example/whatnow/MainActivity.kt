@@ -45,6 +45,11 @@ class MainActivity : AppCompatActivity() {
             loadNews()
             binding.swipeRefresh.isRefreshing = false
         }
+        binding.settingsBtn.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)  // Launch
+
+        }
     }
 
     private fun loadNews() {
@@ -63,7 +68,9 @@ class MainActivity : AppCompatActivity() {
 
         val newsCallable = retrofit.create(NewsCallable::class.java)
 
-        newsCallable.getNews().enqueue(object : Callback<News> {
+        val category = intent.getStringExtra("category") ?: "general"
+
+        newsCallable.getNews("us", category).enqueue(object : Callback<News> {
             override fun onResponse(p0: Call<News>, response: Response<News>) {
                 val news = response.body()
                 val articles = news?.articles
