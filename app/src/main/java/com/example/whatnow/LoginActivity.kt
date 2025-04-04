@@ -77,7 +77,8 @@ class LoginActivity : AppCompatActivity() {
                             .setNegativeButton("OK", null)
                             .show()
                     } else {
-                        Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"no internet Connection or wrong email", Toast.LENGTH_SHORT).show()
+
                     }
                 }
         }

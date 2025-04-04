@@ -111,7 +111,7 @@ class SignUpActivity : AppCompatActivity() {
                     // Redirect to VerificationActivity after email verification
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
-                    finish() // Close SignUpActivity
+                    finish()
                 }
             }
     }
