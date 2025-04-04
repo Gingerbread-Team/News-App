@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings">
+    >
+
+    <TextView
+        android:id="@+id/categories_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="categoires"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <Button
+        android:id="@+id/sports_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DCF0FF"
+        android:text="Sports"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categories_tv"
+        android:drawableRight="@drawable/sports"
+        />
+
+    <Button
+        android:id="@+id/business_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DCF0FF"
+        android:text="business"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/business"
+        app:layout_constraintStart_toEndOf="@id/sports_btn"
+        app:layout_constraintTop_toBottomOf="@id/categories_tv" />
+
+    <Button
+        android:id="@+id/entertainment_btn"
+        android:layout_width="wrap_content"
+android:drawableRight="@drawable/entertainment"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DCF0FF"
+        android:text="entertainment"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/business_btn"
+        app:layout_constraintTop_toBottomOf="@id/categories_tv"
+        />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.whatnow
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -19,8 +20,20 @@ class SettingsActivity : AppCompatActivity() {
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        //in Main ACtivity
+        val intent = Intent(this, MainActivity::class.java)
+        binding.sportsBtn.setOnClickListener {
+            intent.putExtra("category", "sports") // passing the category
+            startActivity(intent)
+        }
+        binding.businessBtn.setOnClickListener {
+            intent.putExtra("category", "business") // passing the category
+            startActivity(intent)
+        }
+        binding.entertainmentBtn.setOnClickListener {
+            intent.putExtra("category", "entertainment") // passing the category
+            startActivity(intent)
+        }
+        //in Main Activity
         //sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
         //in load news function
         //val selectedCountry = sharedPreferences.getString("selected_country", "us") ?: "us"
